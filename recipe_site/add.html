@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Добавить рецепт</title>
+</head>
+
+<body>
+
+    <header>
+        <a href="index.html">
+            <img src="images/logo.png" alt="Логотип кулинарного портала" width="80">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="catalog.html">Каталог</a></li>
+                <li><a href="collections.html">Подборки</a></li>
+                <li><a href="faq.html">Вопрос-ответ</a></li>
+                <li><a href="cabinet.html">Личный кабинет</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <hr>
+
+    <main>
+        <h1>Добавить рецепт</h1>
+        <p>Заполните форму, чтобы ваш рецепт появился на сайте. Все поля, отмеченные как обязательные, нужно заполнить.
+        </p>
+
+        <form action="/submit-recipe" method="POST">
+
+            <fieldset>
+                <legend>Основная информация</legend>
+
+                <p>
+                    <label for="recipe-name">Название блюда (обязательно):</label><br>
+                    <input type="text" id="recipe-name" name="recipe_name" placeholder="Например, овощной салат"
+                        required>
+                </p>
+
+                <p>
+                    <label for="recipe-photo">Фотография блюда:</label><br>
+                    <input type="file" id="recipe-photo" name="recipe_photo" accept="image/*">
+                </p>
+
+                <p>
+                    <label for="recipe-cal">Калорийность (ккал) (обязательно):</label><br>
+                    <input type="number" id="recipe-cal" name="calories" min="1" max="2000" step="1"
+                        placeholder="От 1 до 2000" required>
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Детали рецепта</legend>
+
+                <p>
+                    <label for="recipe-category">Категория блюда:</label><br>
+                    <select id="recipe-category" name="category">
+                        <option value="soup" selected>Суп</option>
+                        <option value="salad">Салат</option>
+                        <option value="main">Второе блюдо</option>
+                        <option value="dessert">Десерт</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="recipe-ingredients">Ингредиенты (обязательно):</label><br>
+                    <textarea id="recipe-ingredients" name="ingredients" rows="5" cols="40" 
+                        placeholder="Введите каждый ингредиент с новой строки. Например:&#10;2 яйца&#10;100 г муки&#10;1 стакан молока" 
+                        required></textarea>
+                </p>
+
+                <fieldset>
+                    <legend>Пошаговое приготовление</legend>
+
+                    <p>
+                        <label for="step1">Шаг 1 (обязательно):</label><br>
+                        <textarea id="step1" name="step_1" rows="3" cols="40" placeholder="Что нужно сделать?"
+                            required></textarea>
+                    </p>
+
+                    <p>
+                        <label for="step2">Шаг 2 (обязательно):</label><br>
+                        <textarea id="step2" name="step_2" rows="3" cols="40" placeholder="Что нужно сделать?"
+                            required></textarea>
+                    </p>
+
+                    <p>
+                        <label for="step3">Шаг 3:</label><br>
+                        <textarea id="step3" name="step_3" rows="3" cols="40"
+                            placeholder="Что нужно сделать?"></textarea>
+                    </p>
+                </fieldset>
+            </fieldset>
+
+            <p>
+                <button type="submit">Отправить рецепт</button>
+                <button type="reset">Очистить форму</button>
+            </p>
+        </form>
+    </main>
+
+    <hr>
+
+    <footer>
+        <p><a href="index.html">Главная</a> | <a href="catalog.html">Каталог</a> | <a>maria@mail.ru</a>
+        </p>
+    </footer>
+
+</body>
+
+</html>
