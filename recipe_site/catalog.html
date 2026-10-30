@@ -31,19 +31,47 @@
 
         <aside>
             <h2>Сортировка</h2>
-            <ul>
-                <li><button type="button">Сортировка: По названию (А-Я)</button></li>
-                <li><button type="button">Сортировка: Сначала новые</button></li>
-                <li><button type="button">Сортировка: Время приготовления</button></li>
-            </ul>
+
+            <p>
+                <label for="sort-select">Сортировать по:</label><br>
+                <select id="sort-select" name="sort">
+                    <option value="name_asc" selected>По названию (А-Я)</option>
+                    <option value="new">Сначала новые</option>
+                    <option value="time">Время приготовления</option>
+                </select>
+            </p>
 
             <h2>Фильтры</h2>
-            <ul>
-                <li><button type="button">Фильтр: Кухня</button></li>
-                <li><button type="button">Фильтр: Калории</button></li>
-                <li><button type="button">Фильтр: Время приготовления</button></li>
-                <li><button type="button">Фильтр: Сложность</button></li>
-            </ul>
+
+            <p>
+                <label for="recipe-category">Категория блюда:</label><br>
+                <select id="recipe-category" name="category">
+                    <option value="soup" selected>Суп</option>
+                    <option value="salad">Салат</option>
+                    <option value="main">Второе блюдо</option>
+                    <option value="dessert">Десерт</option>
+                </select>
+            </p>
+
+            <p>
+                <label for="filter-difficulty">Сложность:</label><br>
+                <select id="filter-difficulty" name="difficulty">
+                    <option value="all" selected>Любая</option>
+                    <option value="easy">Легко</option>
+                    <option value="medium">Средне</option>
+                    <option value="hard">Сложно</option>
+                </select>
+            </p>
+
+            <p>
+                <label for="filter-calories">Калорийность:</label><br>
+                <select id="filter-calories" name="calories">
+                    <option value="all" selected>Не важно</option>
+                    <option value="low">До 300 ккал</option>
+                    <option value="medium">300-600 ккал</option>
+                    <option value="high">Более 600 ккал</option>
+                </select>
+            </p>
 
             <p>
                 <button type="button">Применить</button>

@@ -67,9 +67,24 @@
                 </p>
 
                 <p>
+                    <label for="recipe-difficulty">Сложность приготовления:</label><br>
+                    <select id="recipe-difficulty" name="difficulty">
+                        <option value="easy" selected>Легко</option>
+                        <option value="medium">Средне</option>
+                        <option value="hard">Сложно</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="recipe-time">Время приготовления (мин):</label><br>
+                    <input type="number" id="recipe-time" name="cook_time" min="5" max="1440" step="5"
+                        placeholder="Например, 30" required>
+                </p>
+
+                <p>
                     <label for="recipe-ingredients">Ингредиенты (обязательно):</label><br>
-                    <textarea id="recipe-ingredients" name="ingredients" rows="5" cols="40" 
-                        placeholder="Введите каждый ингредиент с новой строки. Например:&#10;2 яйца&#10;100 г муки&#10;1 стакан молока" 
+                    <textarea id="recipe-ingredients" name="ingredients" rows="5" cols="40"
+                        placeholder="Введите каждый ингредиент с новой строки. Например:&#10;2 яйца&#10;100 г муки&#10;1 стакан молока"
                         required></textarea>
                 </p>
 
