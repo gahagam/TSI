@@ -25,14 +25,43 @@
     <hr>
     <main>
         <h1>Вопрос-ответ</h1>
+
+        <div>
+            <h2>Можно ли менять рецепты других пользователей?</h2>
+            <p>Нет, редактировать можно только свои рецепты. Чужие рецепты можно только сохранять в избранное.</p>
+        </div>
+
         <div>
             <h2>Чем заменить сливки?</h2>
             <p>Сливки можно заменить сметаной или молоком.</p>
         </div>
+
         <div>
             <h2>Как добавить рецепт?</h2>
             <p>Нажмите на кнопку <a href="add.html">Добавить рецепт</a> в меню.</p>
         </div>
+
+        <div>
+            <h2>Вот мое блюдо, подскажите не стремно?</h2>
+            <p>Пожалуйста, оцените внешний вид. Я готовила это впервые, переживаю, что гости не поймут.</p>
+            <img src="images/dessert.jpg" alt="Фото моего блюда"
+                width="300">
+        </div>
+
+        <h2>Не нашли ответ на свой вопрос?</h2>
+        <p>Напишите нам, и мы обязательно ответим!</p>
+        <form action="/feedback" method="POST">
+            <p>
+                <label for="faq-email">Ваш Email (обязательно):</label><br>
+                <input type="email" id="faq-email" name="email" placeholder="example@mail.ru" required>
+            </p>
+            <p>
+                <label for="faq-message">Ваш вопрос (обязательно):</label><br>
+                <textarea id="faq-message" name="message" rows="4" cols="40" placeholder="Опишите ваш вопрос..."
+                    required></textarea>
+            </p>
+            <button type="submit">Отправить вопрос</button>
+        </form>
     </main>
     <hr>
     <footer>
