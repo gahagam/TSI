@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Добавление нового рецепта</title>
+    <title>Создание нового рецепта</title>
 </head>
 
 <body>
@@ -19,6 +19,7 @@
                 <li><a href="collections.html">Подборки</a></li>
                 <li><a href="faq.html">Вопрос-ответ</a></li>
                 <li><a href="cabinet.html">Личный кабинет</a></li>
+                <li><a href="add.html">Добавить рецепт</a></li>
             </ul>
         </nav>
     </header>
@@ -28,8 +29,7 @@
     <main>
         <h1>Добавление нового рецепта</h1>
         <p>Спасибо, что решили присоединиться к обмену рецептами! Наш сайт как раз и создан для такого обмена опытом и
-            умением
-        </p>
+            умениями.</p>
         <p>Заполните форму, чтобы ваш рецепт появился на сайте. Все поля, отмеченные как обязательные, нужно заполнить.
         </p>
 
@@ -49,15 +49,17 @@
                     <input type="file" id="recipe-photo" name="recipe_photo" accept="image/*">
                 </p>
 
-                <p>
-                    <label for="recipe-cal">Калорийность (ккал) (обязательно):</label><br>
-                    <input type="number" id="recipe-cal" name="calories" min="1" max="2000" step="1"
-                        placeholder="От 1 до 2000" required>
-                </p>
+
             </fieldset>
 
             <fieldset>
-                <legend>Детали рецепта</legend>
+                <legend>Характеристика</legend>
+
+                <p>
+                    <label for="recipe-cal">Калорийность (ккал):</label><br>
+                    <input type="number" id="recipe-cal" name="calories" min="1" max="2000" step="1"
+                        placeholder="От 1 до 2000">
+                </p>
 
                 <p>
                     <label for="recipe-category">Категория блюда:</label><br>
@@ -81,37 +83,39 @@
                 <p>
                     <label for="recipe-time">Время приготовления (мин):</label><br>
                     <input type="number" id="recipe-time" name="cook_time" min="5" max="1440" step="5"
-                        placeholder="Например, 30" required>
+                        placeholder="Например, 30">
                 </p>
+            </fieldset>
 
+            <fieldset>
+                <legend>Ингредиенты</legend>
+                <div>
+                    <p>
+                        <label for="ing-name">Ингредиент (обязательно):</label><br>
+                        <input type="text" id="ing-name" name="ingredient_name" placeholder="Например, Тыква" required>
+                    </p>
+                    <p>
+                        <label for="ing-qty">Количество:</label><br>
+                        <input type="text" id="ing-qty" name="ingredient_qty" placeholder="Например, 500 гр">
+                    </p>
+                    <p>
+                        <button type="button">Добавить ингредиент</button>
+                        <button type="button">Удалить</button>
+                    </p>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Пошаговое приготовление</legend>
                 <p>
-                    <label for="recipe-ingredients">Ингредиенты (обязательно):</label><br>
-                    <textarea id="recipe-ingredients" name="ingredients" rows="5" cols="40"
-                        placeholder="Введите каждый ингредиент с новой строки. Например:&#10;2 яйца&#10;100 г муки&#10;1 стакан молока"
+                    <label for="step1">Шаг 1 (обязательно):</label><br>
+                    <textarea id="step1" name="step_1" rows="3" cols="40" placeholder="Что нужно сделать?"
                         required></textarea>
                 </p>
-
-                <fieldset>
-                    <legend>Пошаговое приготовление</legend>
-
-                    <p>
-                        <label for="step1">Шаг 1 (обязательно):</label><br>
-                        <textarea id="step1" name="step_1" rows="3" cols="40" placeholder="Что нужно сделать?"
-                            required></textarea>
-                    </p>
-
-                    <p>
-                        <label for="step2">Шаг 2 (обязательно):</label><br>
-                        <textarea id="step2" name="step_2" rows="3" cols="40" placeholder="Что нужно сделать?"
-                            required></textarea>
-                    </p>
-
-                    <p>
-                        <label for="step3">Шаг 3:</label><br>
-                        <textarea id="step3" name="step_3" rows="3" cols="40"
-                            placeholder="Что нужно сделать?"></textarea>
-                    </p>
-                </fieldset>
+                <p>
+                    <button type="button">Добавить шаг</button>
+                    <button type="button">Удалить</button>
+                </p>
             </fieldset>
 
             <p>
@@ -124,8 +128,7 @@
     <hr>
 
     <footer>
-        <p><a href="index.html">Главная</a> | <a href="catalog.html">Каталог</a> | <a>maria@mail.ru</a>
-        </p>
+        <p><a href="index.html">Главная</a> | <a href="catalog.html">Каталог</a> | <a>maria@mail.ru</a></p>
     </footer>
 
 </body>

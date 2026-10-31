@@ -25,6 +25,10 @@
     <hr>
     <main>
         <h1>Вопрос-ответ</h1>
+        <p>Добро пожаловать в наш раздел часто задаваемых вопросов! Здесь мы собрали самые популярные вопросы от наших
+            пользователей о работе кулинарного портала, сохранении рецептов и тонкостях приготовления блюд. Если вы не
+            нашли ответ на свой вопрос, вы всегда можете написать нам через форму обратной связи внизу страницы. Мы
+            регулярно обновляем этот раздел, чтобы сделать использование сайта максимально удобным.</p>
 
         <div>
             <h2>Можно ли менять рецепты других пользователей?</h2>
@@ -42,26 +46,22 @@
         </div>
 
         <div>
-            <h2>Вот мое блюдо, подскажите не стремно?</h2>
-            <p>Пожалуйста, оцените внешний вид. Я готовила это впервые, переживаю, что гости не поймут.</p>
-            <img src="images/dessert.jpg" alt="Фото моего блюда"
-                width="300">
-        </div>
+            <h2>Не нашли ответ на свой вопрос?</h2>
+            <p>Напишите нам, и мы обязательно ответим!</p>
 
-        <h2>Не нашли ответ на свой вопрос?</h2>
-        <p>Напишите нам, и мы обязательно ответим!</p>
-        <form action="/feedback" method="POST">
-            <p>
-                <label for="faq-email">Ваш Email (обязательно):</label><br>
-                <input type="email" id="faq-email" name="email" placeholder="example@mail.ru" required>
-            </p>
-            <p>
-                <label for="faq-message">Ваш вопрос (обязательно):</label><br>
-                <textarea id="faq-message" name="message" rows="4" cols="40" placeholder="Опишите ваш вопрос..."
-                    required></textarea>
-            </p>
-            <button type="submit">Отправить вопрос</button>
-        </form>
+            <form action="/feedback" method="POST">
+                <p>
+                    <label for="faq-email">Ваш Email (обязательно):</label><br>
+                    <input type="email" id="faq-email" name="email" placeholder="example@mail.ru" required>
+                </p>
+                <p>
+                    <label for="faq-message">Ваш вопрос (обязательно):</label><br>
+                    <textarea id="faq-message" name="message" rows="4" cols="40" placeholder="Опишите ваш вопрос..."
+                        required></textarea>
+                </p>
+                <button type="submit">Отправить вопрос</button>
+            </form>
+        </div>
     </main>
     <hr>
     <footer>
