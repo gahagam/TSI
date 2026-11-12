@@ -1,0 +1,6 @@
+/* Стили только для главной страницы */
+.main-title {
+    text-align: center;
+    color: #e67e22;
+    font-size: 2em;
+}
