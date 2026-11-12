@@ -1,0 +1,58 @@
+/* --- КАРТОЧКИ ВОПРОСОВ --- */
+.question {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #e9ecef;
+    border-left: 5px solid #3498db; /* Синяя полоска слева для красоты */
+    border-radius: 8px;
+}
+
+/* Заголовки вопросов */
+.question h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #2c3e50;
+}
+
+/* Текст ответов */
+.question p {
+    margin-bottom: 0;
+    line-height: 1.5;
+    color: #555;
+}
+
+/* --- ФОРМА ОБРАТНОЙ СВЯЗИ --- */
+/* Выделяем последний блок с формой оранжевой полоской */
+div:last-child {
+    background-color: #f8f9fa;
+    border-left: 5px solid #ff0000;
+}
+
+/* Поля ввода */
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Кнопка */
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #2980b9;
+}

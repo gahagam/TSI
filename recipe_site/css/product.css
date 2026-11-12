@@ -1,0 +1,73 @@
+/* --- Общие стили для страницы рецепта --- */
+
+/* Ограничиваем ширину текста, чтобы строки не растягивались на весь экран (удобнее читать) */
+main {
+    max-width: 900px;
+}
+
+/* Делаем картинку блюда аккуратной */
+main > img {
+    max-width: 100%;         /* Не вылезает за экран */
+    height: auto;            /* Пропорции сохраняются */
+    border-radius: 10px;     /* Скругляем углы */
+    margin-bottom: 20px;     /* Отступ снизу */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Легкая тень */
+}
+
+/* --- Таблица характеристик --- */
+table {
+    width: 100%;             /* Таблица на всю ширину */
+    border-collapse: collapse; /* Убираем двойные рамки */
+    margin-bottom: 25px;     /* Отступ снизу */
+    background-color: #fff;
+}
+
+th, td {
+    padding: 12px;           /* Внутренние отступы в ячейках */
+    border: 1px solid #ddd;  /* Рамки ячеек */
+    text-align: left;
+}
+
+th {
+    background-color: #f4f6f8; /* Серый фон для заголовков таблицы */
+    color: #2c3e50;
+    width: 40%;              /* Заголовок занимает 40% ширины */
+}
+
+/* --- Списки (ингредиенты) --- */
+main ul {
+    background-color: #fff;
+    padding: 15px 15px 15px 35px; /* Отступ слева для точек */
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    list-style-type: square; /* Квадратные маркеры вместо круглых */
+}
+
+main ul li {
+    margin-bottom: 8px;
+}
+
+/* --- Шаги приготовления --- */
+/* Твой HTML использует <p><strong>Шаг 1</strong><br>...</p> */
+/* Мы оформим их как красивые блоки */
+main > p strong {
+    font-size: 1.1em;
+    color: #2c3e50;
+}
+
+/* Кнопка "Добавить в избранное" */
+main button {
+    background-color: #e67e22; /* Оранжевая кнопка */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+main button:hover {
+    background-color: #d35400;
+}
