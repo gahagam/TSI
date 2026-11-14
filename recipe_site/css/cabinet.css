@@ -1,51 +1,43 @@
-/* 1. Блоки профиля */
 .box {
-    background-color: #f8f9fa;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    margin-bottom: 20px;
+    background-color: #f8f9fa; 
+    padding: 20px;            
+    border: 1px solid #ccc;   
+    border-radius: 8px;      
+    margin-bottom: 20px;      
 }
 
-/* 2. Аватарка */
 .box img {
-    border-radius: 8px;
-    border: 3px solid #ccc;
-    width: 300px;
-    height: auto;
+    border-radius: 8px;       
+    border: 3px solid #ccc;   
+    width: 300px;             
+    height: auto;             
 }
 
-/* 3. Кнопки в профиле (выстраиваем в один ряд) */
 .box ul {
-    padding: 0;
-    list-style-type: none;
-    display: flex;       /* Ставим кнопки в строку */
-    gap: 15px;           /* Отступ между ними */
-    margin: 0;
+    padding: 0;                
+    list-style-type: none;     /*убрала точки */
+    display: flex;             
+    gap: 15px;                 /*  отступ между кнопками */
+    margin: 0;                 /* убрала внешние отступы */
 }
 
 .box ul a {
-    display: block;
-    background-color: #3498db;
-    color: white;
-    padding: 10px 20px;  /* Чуть шире, чтобы текст помещался */
-    border-radius: 4px;
-    text-decoration: none;
-    text-align: center;
-    /* Убрали жесткую ширину (width: 200px), чтобы кнопки подстраивались под текст */
+    background-color: #3498db; 
+    color: white;            
+    padding: 10px 20px;       
+    border-radius: 4px;       
+    text-decoration: none;     /* убрала подчеркивание у ссылок */
 }
 
 .box ul a:hover {
-    background-color: #2980b9;
+    background-color: #2980b9; 
 }
 
-/* Карточка для раздела "О себе" */
 .about-title {
-    background-color: #ffffff; /* Белый фон */
-    border: 1px solid #e9ecef; /* Светлая рамка */
-    border-radius: 8px;        /* Скругленные углы */
-    padding: 20px;             /* Внутренние отступы */
-    margin-top: 20px;          /* Отступ от данных профиля */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* Легкая тень для объема */
-    line-height: 1.6;          /* Удобный интервал между строками */
+    background-color: #ffffff; 
+    border: 1px solid #e9ecef; 
+    border-radius: 8px;        
+    padding: 20px;            
+    margin-top: 20px;         
+    line-height: 1.6;          /* межстрочный интервал */
 }

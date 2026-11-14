@@ -1,44 +1,49 @@
-/* Базовые стили для всего сайта */
 body {
     font-family: Arial, sans-serif;
     background-color: #f9f9f9;
-    color: #333333;
+    color: #333;
     margin: 0;
+    /* отступы */
     padding: 20px;
+    /* внутр отступы */
 }
 
 header {
     background-color: #ffffff;
     padding: 10px;
-    border-bottom: 2px solid #cccccc;
+    border-bottom: 2px solid #ccc;
+    /* добавила линию снизу */
     display: flex;
+    /* выравнивание в строку */
     align-items: center;
+    /*  по центру по вертикали */
     gap: 20px;
+    /* отступ*/
 }
 
+
 nav ul {
-    list-style-type: none;
+    list-style-type: none; /* убираю точки у списка */
     padding: 0;
     margin: 0;
     display: flex;
     gap: 15px;
 }
 
+/* Ссылки на сайте */
 a {
-    color: #0066cc;
-    text-decoration: none;
-}
-
-/* Шрифт для меню в шапке */
-nav a {
     color: #3498db;
-    font-size: 19px;
-    font-weight: bold;
-    /* Сделаем его чуть жирнее */
+    text-decoration: none; /*  подчеркивание */
 }
 
 a:hover {
     text-decoration: underline;
+}
+
+/* Пункты меню в шапке */
+nav a {
+    font-size: 19px;
+    font-weight: bold;
 }
 
 h1,
@@ -46,14 +51,15 @@ h2 {
     color: #2c3e50;
 }
 
-/* Подвал */
 footer {
     margin-top: 20px;
+    /* сверху */
     padding-top: 10px;
-    border-top: 1px solid #cccccc;
+    /* Отступ внутри  */
+    border-top: 1px solid #ccc;
     text-align: center;
     clear: both;
-    /* Вот это заставит подвал упасть вниз */
+
 }
 
 .welcome-text {
@@ -62,13 +68,13 @@ footer {
     background-color: #e3f2fd;
     padding: 10px;
     border-left: 4px solid #3498db;
+    /* акцент полоска */
 }
-
 
 .card {
     float: left;
     width: 31%;
-    /* По 3 штуки в ряд */
+    /* Ширина карточки */
     margin-right: 3.5%;
     /* Отступ между карточками */
     margin-bottom: 20px;
@@ -77,50 +83,84 @@ footer {
     border-radius: 8px;
     padding: 15px;
     box-sizing: border-box;
+    /* Чтобы отступы не увеличивали ширину */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    /* добавила тень карточки */
+
+    display: flex;
+    /*  чтобы прижать ссылку к низу */
+    flex-direction: column;
+    /* элементы идут сверху вниз */
 }
 
-/* Убираем отступ у каждой третьей */
+/*  отступ у каждой третьей карточки в ряду */
 .card:nth-of-type(3n) {
     margin-right: 0;
 }
 
+/* Заголовок внутри карточки */
 .card h2 {
     font-size: 18px;
     margin-top: 0;
-    color: #2c3e50;
+    /* отступ сверху */
 }
 
 .card img {
     width: 100%;
     height: 150px;
     object-fit: cover;
+    /* обрезка лишнего */
     border-radius: 4px;
     margin-bottom: 10px;
 }
 
 .card p {
     margin-bottom: 15px;
+    /* отступ между абзацами */
     line-height: 1.5;
+    /*межстрочный интервал */
 }
 
-/* Ссылка "Подробнее" (просто отступ) */
+/*  "Подробнее"  */
 .card a {
     display: inline-block;
-    margin-top: 10px;
-    color: #3498db;
-    text-decoration: none;
+    /* блок */
     font-weight: bold;
+    padding-top: 10px;
 }
 
-/* Очистка, чтобы подвал не налезал */
-body::after {
-    content: "";
-    display: table;
-    clear: both;
+
+/* Ограничение текста 4 строками (для длинных описаний) */
+.desc {
+    display: -webkit-box;
+    /* Включаю режим обрезки */
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    /* Текст идет вертикально */
+    overflow: hidden;
+    /* все прячу */
+    text-overflow: ellipsis;
+    /* ...*/
 }
 
-/* Телефоны */
+.btn-back {
+    display: inline-block;
+    background-color: #f8f9fa;
+    color: #2c3e50;
+    padding: 8px 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-decoration: none;
+    /* убрала подчеркивание */
+    margin-bottom: 20px;
+}
+
+.btn-back:hover {
+    background-color: #e9ecef;
+}
+
+
+/* Адаптивная версия для мобильных телефонов */
 @media (max-width: 768px) {
     .card {
         width: 100%;

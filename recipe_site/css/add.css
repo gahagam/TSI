@@ -1,79 +1,68 @@
-/* 1. Ограничиваем ширину формы, чтобы она не растягивалась на весь экран */
-main {
-    max-width: 700px;
-    margin: 0 auto; /* Центрируем по середине */
+form {
+    max-width: 700px; 
+    margin: 0 auto; /*Отступы сверху/снизу 0, а слева/справа автоматически (центрирование) */
 }
 
-/* 2. Делаем красивыми рамки вокруг групп (fieldset) */
+/* рамки вокруг полей */
 fieldset {
-    border: 1px solid #ddd;
+    border: 1px solid #ddd; 
     border-radius: 8px;
-    padding: 20px;
+    padding: 20px; 
     margin-bottom: 20px;
     background-color: #fafafa;
 }
 
-/* 3. Красиво выделяем заголовки групп (legend) */
+/* заголовки групп */
 legend {
-    font-weight: bold;
-    color: #2c3e50;
-    padding: 0 10px;
-    font-size: 16px;
+    font-weight: bold; 
+    color: #2c3e50; 
+    padding: 0 10px; /* Отступы по бокам */
+    font-size: 16px; 
 }
 
-/* 4. Делаем так, чтобы текстовые поля, числа и выпадающие списки были на всю ширину и аккуратными */
-input[type="text"],
-input[type="number"],
-select,
-textarea {
-    width: 100%;             /* На всю ширину */
-    padding: 10px;           /* Отступы внутри */
-    margin-top: 5px;         /* Отступ от подписи */
-    margin-bottom: 10px;     /* Отступ снизу */
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;  /* Чтобы padding не увеличивал ширину */
-    font-family: inherit;    /* Одинаковый шрифт */
+/* Делаю все поля ввода широкими и аккуратными */
+input, select, textarea {
+    width: 100%;
+    padding: 10px; 
+    margin-top: 5px; 
+    margin-bottom: 10px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    box-sizing: border-box; 
 }
 
-/* 5. Стилизуем кнопки внутри формы */
 form button {
-    padding: 10px 15px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 14px;
+    padding: 10px 15px; 
+    border: none; /* рамка браузера */
+    border-radius: 4px; 
+    cursor: pointer; /* курсор мыши*/
+    font-size: 14px; 
     margin-right: 5px;
     margin-bottom: 10px;
+    background-color: #e9ecef; 
+    color: #333; 
 }
 
-/* Кнопки "Добавить ингредиент" и "Добавить шаг" (обычные) - делаем серыми */
-form button[type="button"] {
-    background-color: #e9ecef;
-    color: #333;
-}
-form button[type="button"]:hover {
-    background-color: #d1d5db;
+form button:hover {
+    background-color: #d1d5db; 
 }
 
-/* Кнопка "Отправить рецепт" (submit) - делаем синей и заметной */
-form button[type="submit"] {
-    background-color: #3498db;
-    color: white;
-    font-size: 16px;
-    padding: 12px 20px;
+.btn-send {
+    background-color: #3498db; 
+    color: white; 
+    font-size: 16px; 
 }
-form button[type="submit"]:hover {
+
+.btn-send:hover {
     background-color: #2980b9;
 }
 
-/* Кнопка "Очистить форму" (reset) - делаем красноватой */
-form button[type="reset"] {
+.btn-clear {
     background-color: #e74c3c;
-    color: white;
-    font-size: 16px;
-    padding: 12px 20px;
+    color: white; 
+    font-size: 16px; 
 }
-form button[type="reset"]:hover {
-    background-color: #c0392b;
+
+.btn-clear:hover {
+    background-color: #c0392b; 
 }

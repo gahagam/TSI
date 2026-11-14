@@ -1,46 +1,46 @@
-/* =========================================
-   ФИЛЬТРЫ (В ОДНУ СТРОКУ)
-   ========================================= */
 aside {
     background-color: #f8f9fa;
-    padding: 15px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    margin: 0 auto 30px auto;
-    max-width: 900px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
+    padding: 15px;             
+    border: 1px solid #ccc;    
+    border-radius: 8px;       
+    margin: 0 auto 30px auto;  /* центр добавляю отступ снизу */
+    max-width: 900px;          /* чтобы не растягивался на весь экран */
+    
+    display: flex;            
+    align-items: center;       /*  по центру по вертикали */
+    justify-content: center;   /*  по центру по горизонтали */
+    gap: 15px;                
 }
 
 aside p {
     margin: 0;
 }
 
+/*  выпадающие списки */
 aside select {
-    padding: 6px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    padding: 6px;              
+    border: 1px solid #ccc;    
+    border-radius: 4px;      
 }
 
 aside button {
-    padding: 8px 15px;
-    background-color: #3498db;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+    padding: 8px 15px;        
+    background-color: #3498db; 
+    color: #fff;             
+    border: none;              /*  рамка браузера */
+    border-radius: 4px;        
+    cursor: pointer;           /* курсор мыши */
 }
 
 aside button:hover {
     background-color: #2980b9;
 }
 
-/* Очистка, чтобы подвал не налезал */
-body::after {
-    content: "";
-    display: table;
-    clear: both;
+.btn-clear {
+    background-color: #e74c3c;
 }
+
+.btn-clear:hover {
+    background-color: #c0392b;
+}
+
